@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Nave</name>
+    <events>
+        <event-block sid="171902925489629">
+            <conditions>
+                <condition id="2" name="Key is down" sid="686765444592598" type="Keyboard">
+                    <param id="0" name="Key">38</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="323655528047140" type="MainChar">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">0 + MainChar.Height/2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="646973728253716" type="MainChar">
+                    <param id="0" name="Y">MainChar.Y - 4</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="812236002417999">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="443235424234191">
+            <conditions>
+                <condition id="2" name="Key is down" sid="329710944301598" type="Keyboard">
+                    <param id="0" name="Key">40</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="709877724451899" type="MainChar">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Y co-ordinate">480 - MainChar.Height/2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="264006928604711" type="MainChar">
+                    <param id="0" name="Y">MainChar.Y + 4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="389309515061043">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="178726544394147" type="MainChar">
+                    <param id="0" name="Object">enemy_Type1</param>
+                </condition>
+                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="306006362413388" type="MainChar" />
+            </conditions>
+            <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="199026564493259" type="MainChar">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="597083931351391" type="MainChar">
+                    <param id="0" name="Instance variable">life</param>
+                    <param id="1" name="Value">enemy_Type1.danio</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="284187969989569">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="415049540680642" type="MainChar">
+                            <param id="0" name="Instance variable">life</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="819450921587559" type="MainChar">
+                            <param id="0" name="Animation">&quot;dead&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="3" name="Start" sid="557588694653416" type="MainChar">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="150371639352952" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="417903998612961" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="366188794884911">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="520952375214546" type="MainChar">
+                    <param id="0" name="Object">Asteroid</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="333732818763814" type="MainChar">
+                    <param id="0" name="Animation">&quot;dead&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="3" name="Start" sid="796634492497949" type="MainChar">
+                    <param id="0" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="489035357777488" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="716359021318417" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="228960356512429">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="690136225022921" type="MainChar">
+                    <param id="0" name="Object">winActivator</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="OUT" id="1" name="Start fade" sid="820967427175581" type="Fade" />
+                <action id="-25" name="Go to layout (by name)" sid="513570780835330" type="System">
+                    <param id="0" name="Layout">&quot;Menu&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="992188904684830">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="477700653467277" type="Keyboard">
+                    <param id="0" name="Key">32</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="194448940474321" type="MainChar">
+                    <param id="0" name="Object">bullet</param>
+                    <param id="1" name="Layer">&quot;Bullets&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="267985927577646">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="467454777929009" type="MainChar">
+                    <param id="0" name="Object">gems</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="997695950520939" type="System">
+                    <param id="0" name="Variable">points</param>
+                    <param id="1" name="Value">gems.value</param>
+                </action>
+                <action id="-9" name="Destroy" sid="575852254025754" type="gems" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

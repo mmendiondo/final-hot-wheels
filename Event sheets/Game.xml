@@ -3,8 +3,25 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game</name>
     <events>
-        <include>Menu</include>
-        <include>Enemigo</include>
-        <include>Auto</include>
+        <include>Enemies</include>
+        <include>HUD</include>
+        <include>Nave</include>
+        <variable constant="0" name="points" sid="334158044542713" static="0" type="number">0</variable>
+        <comment>codigo que hace que la camara siga al personaje, no agregar ningun scroll to a ningun objeto, con mover la nave la camara va a estar pegada a ella</comment>
+        <event-block sid="314740293498858">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3618471551305103" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="3082464380067917" type="Camera">
+                    <param id="0" name="Pin to">MainChar</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="703523987397389" type="System">
+                    <param id="0" name="Variable">points</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

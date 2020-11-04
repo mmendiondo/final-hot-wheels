@@ -46,8 +46,9 @@
     <event-folder>
         <event-sheet>Game.xml</event-sheet>
         <event-sheet>Menu.xml</event-sheet>
-        <event-sheet>Enemigo.xml</event-sheet>
-        <event-sheet>Auto.xml</event-sheet>
+        <event-sheet>Enemies.xml</event-sheet>
+        <event-sheet>Nave.xml</event-sheet>
+        <event-sheet>HUD.xml</event-sheet>
     </event-folder>
     <global-instances />
     <sounds-folder />

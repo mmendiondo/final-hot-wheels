@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>HUD</name>
+    <events>
+        <event-block sid="126389232923682">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="210958325350715" type="System" />
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="261493654001647" type="lifeBar">
+                    <param id="0" name="Width">(MainChar.life / MainChar.maxLife) * 188</param>
+                </action>
+                <action id="0" name="Set text" sid="623004128551890" type="pointsText">
+                    <param id="0" name="Text">points</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
