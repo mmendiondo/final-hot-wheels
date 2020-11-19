@@ -1,6 +1,116 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Auto</name>
-    <events />
+    <name>auto</name>
+    <events>
+        <event-block sid="485848067562465">
+            <conditions>
+                <condition id="2" name="Key is down" sid="153192512612353" type="Keyboard">
+                    <param id="0" name="Key">38</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="592644455266948" type="auto">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Y co-ordinate">auto.positionY-50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="605461100208493" type="auto">
+                    <param id="0" name="Y">auto.Y  - 4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="907718867792416">
+            <conditions>
+                <condition id="2" name="Key is down" sid="849315795808982" type="Keyboard">
+                    <param id="0" name="Key">40</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="161295244796085" type="auto">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Y co-ordinate">auto.positionY+50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="331797410204535" type="auto">
+                    <param id="0" name="Y">auto.Y + 4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="136464630732293">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="583415613667979" type="auto">
+                    <param id="0" name="Object">baja</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="672301133530868" type="auto">
+                    <param id="0" name="Y">auto.Y+baja.cantidad</param>
+                </action>
+                <action id="-11" name="Add to" sid="437958634451132" type="auto">
+                    <param id="0" name="Instance variable">positionY</param>
+                    <param id="1" name="Value">baja.cantidad</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="689555568577185">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="168762487899274" type="auto">
+                    <param id="0" name="Object">loop</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="251278843303162" type="auto">
+                    <param id="0" name="Instance variable">inLoop</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-11" name="Is within angle" sid="400707875461659" type="auto">
+                    <param id="0" name="Within">60</param>
+                    <param id="1" name="Angle">360</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Rotate" id="0" name="Set speed" sid="364813270399400" type="auto">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="739404344761523" type="auto">
+                    <param id="0" name="Angle">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="923039400567640">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="905582347171764" type="auto">
+                    <param id="0" name="Object">loop</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="695137596649127" type="auto">
+                    <param id="0" name="Instance variable">inLoop</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="633463137229598" type="auto">
+                    <param id="0" name="Instance variable">inLoop</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="907204320314341" type="auto">
+                    <param id="0" name="Speed">-auto.Bullet.Speed*0.66</param>
+                </action>
+                <action id="-16" name="Wait" sid="643952662589345" type="System">
+                    <param id="0" name="Seconds">0.7</param>
+                </action>
+                <action id="-9" name="Destroy" sid="332706889374693" type="hotwheelsracetrack6" />
+            </actions>
+        </event-block>
+        <event-block sid="322497138110586">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="892933342440354" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="542495269223683" type="auto">
+                    <param id="0" name="Speed">auto.Bullet.Speed+ 40</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

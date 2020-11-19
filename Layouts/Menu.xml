@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Menu</name>
-    <sid>673919499222706</sid>
-    <event-sheet>Menu</event-sheet>
+    <name>menu</name>
+    <sid>595711981360997</sid>
+    <event-sheet>menu</event-sheet>
     <size>
         <width>1708</width>
         <height>960</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Layer 0" sid="333233684083906">
+        <layer name="Layer 0" sid="512164038018213">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>

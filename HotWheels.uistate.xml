@@ -10,28 +10,42 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">Game</layout>
-        <layout order="3">Menu</layout>
-        <event-sheet active="1" order="2">Game</event-sheet>
-        <event-sheet order="2">Nave</event-sheet>
-        <event-sheet order="3">HUD</event-sheet>
-        <event-sheet order="4">Enemies</event-sheet>
-        <event-sheet order="5">Auto</event-sheet>
+        <layout active="1" order="1">game</layout>
+        <event-sheet order="0">auto</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
         <property expanded="1" name="Project settings" />
-        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1" />
+    <families-expanded root="1">
+        <family expanded="1" name="vehiculos" />
+    </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
-        <folder expanded="1" path="file-folder/" />
+        <folder expanded="0" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
-        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/MAPA/" />
+        <folder expanded="1" path="animation-folder/MAPA2/" />
+        <folder expanded="1" path="animation-folder/edificio2/" />
+        <folder expanded="1" path="animation-folder/edificio3/" />
+        <folder expanded="1" path="animation-folder/edificio1/" />
+        <folder expanded="1" path="animation-folder/cameraFollow/" />
+        <folder expanded="1" path="animation-folder/auto/" />
+        <folder expanded="1" path="animation-folder/pistaSolidos/" />
+        <folder expanded="1" path="animation-folder/hotwheelsracetrack/" />
+        <folder expanded="1" path="animation-folder/hotwheelsracetrack2/" />
+        <folder expanded="1" path="animation-folder/hotwheelsracetrack3/" />
+        <folder expanded="1" path="animation-folder/hotwheelsracetrack4/" />
+        <folder expanded="1" path="animation-folder/hotwheelsracetrack5/" />
+        <folder expanded="1" path="animation-folder/baja/" />
+        <folder expanded="1" path="animation-folder/hotwheelsracetracktop/" />
+        <folder expanded="1" path="animation-folder/loop/" />
+        <folder expanded="1" path="animation-folder/hotwheelsracetrack6/" />
     </folders-expanded>
 </c2uistate>

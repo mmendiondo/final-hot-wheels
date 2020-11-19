@@ -9,15 +9,23 @@
     <app-id>edu.davinci.games</app-id>
     <unique-id>3tlccjy8pcuz4</unique-id>
     <saved-with-version>26900</saved-with-version>
-    <used-plugins />
-    <used-behaviors />
+    <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>854</width>
-        <height>480</height>
+        <width>1080</width>
+        <height>720</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -37,20 +45,276 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder />
-    <families />
+    <object-folder>
+        <object-type name="MAPA" sid="948915487062603">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="800392444401882" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Belén\Desktop\final-hot-wheels-main\referencia-imagenes\MAPA.jpg.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MAPA2" sid="637408303284253">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="619679939117777" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Belén\Desktop\final-hot-wheels-main\referencia-imagenes\MAPA2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="edificio2" sid="912749152262662">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="761600298374123" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Belén\Desktop\final-hot-wheels-main\referencia-imagenes\edificio.png">
+                        <collision-poly>
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0.977083" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="edificio3" sid="510437043278400">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="272663929691447" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Belén\Desktop\final-hot-wheels-main\referencia-imagenes\edificio 3.png">
+                        <collision-poly>
+                            <point x="0.388021" y="0.689815" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.496354" y="0.89537" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="1" />
+                            <point x="0.361979" y="0.356481" />
+                            <point x="0.402604" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="edificio1" sid="506628951829525">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="292709792704022" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Belén\Desktop\final-hot-wheels-main\referencia-imagenes\edificio 1.png">
+                        <collision-poly>
+                            <point x="0.125" y="0.222222" />
+                            <point x="0.5" y="0.352778" />
+                            <point x="0.686979" y="0.556481" />
+                            <point x="0.418229" y="0.5" />
+                            <point x="0.5" y="0.816667" />
+                            <point x="0.0494792" y="0.912037" />
+                            <point x="0.133333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="cameraFollow" sid="651293714048799">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="229995803886403">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="768183829626506" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="auto" sid="289846973645141">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="positionY" sid="470054114807897" type="number" />
+                <instance-variable name="inLoop" sid="403529116954791" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="508365148108502" speed="24">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Matias\Documents\davinci\juegos\final\final-hot-wheels\referencia-imagenes\auto2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Matias\Documents\davinci\juegos\final\final-hot-wheels\referencia-imagenes\auto1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Matias\Documents\davinci\juegos\final\final-hot-wheels\referencia-imagenes\auto3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pistaSolidos" sid="679092820308328">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="208020870257915">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="949749996184299" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="821764512516397">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="hotwheelsracetrack" sid="117319701456565">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="575431151047504" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Matias\Documents\davinci\juegos\final\final-hot-wheels\referencia-imagenes\hot-wheels-race-track1.png">
+                        <collision-poly>
+                            <point x="0.2825" y="0.460848" />
+                            <point x="0.7155" y="0.464111" />
+                            <point x="1" y="0.5" />
+                            <point x="0.8325" y="0.726754" />
+                            <point x="0.1705" y="0.72186" />
+                            <point x="0.0515" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hotwheelsracetrack2" sid="170248306882357">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="652032892074042" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Matias\Documents\davinci\juegos\final\final-hot-wheels\referencia-imagenes\hot-wheels-race-track2.png">
+                        <collision-poly>
+                            <point x="0.286" y="0.46732" />
+                            <point x="0.5" y="0.468954" />
+                            <point x="0.9215" y="0.128268" />
+                            <point x="1" y="0.5" />
+                            <point x="0.927" y="0.880719" />
+                            <point x="0.5" y="0.730392" />
+                            <point x="0.166" y="0.728758" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hotwheelsracetrack3" sid="896531549495894">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="977727260190469" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Matias\Documents\davinci\juegos\final\final-hot-wheels\referencia-imagenes\hot-wheels-race-track3.png">
+                        <collision-poly>
+                            <point x="0.399" y="0.653028" />
+                            <point x="0.6025" y="0.650573" />
+                            <point x="0.8755" y="0.5" />
+                            <point x="0.8655" y="0.779869" />
+                            <point x="0.5" y="0.91162" />
+                            <point x="0.0615" y="0.899345" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hotwheelsracetrack4" sid="858433632932144">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="373251270901568" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Matias\Documents\davinci\juegos\final\final-hot-wheels\referencia-imagenes\hot-wheels-race-track4.png">
+                        <collision-poly>
+                            <point x="0.429" y="0.702128" />
+                            <point x="0.5" y="0.714403" />
+                            <point x="0.5605" y="0.719313" />
+                            <point x="0.9605" y="0.935352" />
+                            <point x="0.5" y="0.971358" />
+                            <point x="0.1245" y="0.796236" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hotwheelsracetrack5" sid="252392932762177">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="572160878584425" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Matias\Documents\davinci\juegos\final\final-hot-wheels\referencia-imagenes\hot-wheels-race-track5.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="baja" sid="765215608274893">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="cantidad" sid="820146379657661" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="249316482597321" speed="5">
+                    <frame duration="1" hotspotX="0.164" hotspotY="0.312" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hotwheelsracetracktop" sid="741447955755567">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="417287878993959" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Matias\Documents\davinci\juegos\final\final-hot-wheels\referencia-imagenes\hot-wheels-race-tracktop.png">
+                        <collision-poly>
+                            <point x="0.261" y="0.427169" />
+                            <point x="0.5" y="0.0949263" />
+                            <point x="0.5435" y="0.5" />
+                            <point x="0.54" y="0.247136" />
+                            <point x="0.5" y="0.430442" />
+                            <point x="0.263" y="0.569558" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="loop" sid="544815613793974">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="468931788884466" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hotwheelsracetrack6" sid="145644389870250">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="642834169299497" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Matias\Documents\davinci\juegos\final\final-hot-wheels\referencia-imagenes\hot-wheels-race-track2.2.png">
+                        <collision-poly>
+                            <point x="0.9215" y="0.128268" />
+                            <point x="1" y="0.5" />
+                            <point x="0.927" y="0.880719" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="vehiculos" plugin-id="Sprite" sid="523004260980179">
+            <members>
+                <member>auto</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Bullet" sid="972841829371533">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="772851114049402">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
     <layout-folder>
-        <layout>Game.xml</layout>
-        <layout>Menu.xml</layout>
+        <layout>game.xml</layout>
+        <layout>menu.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Game.xml</event-sheet>
-        <event-sheet>Menu.xml</event-sheet>
-        <event-sheet>Enemies.xml</event-sheet>
-        <event-sheet>Nave.xml</event-sheet>
-        <event-sheet>HUD.xml</event-sheet>
+        <event-sheet>menu.xml</event-sheet>
+        <event-sheet>auto.xml</event-sheet>
+        <event-sheet>game.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Keyboard" uid="13" />
+    </global-instances>
     <sounds-folder />
     <music-folder />
     <files-folder>
